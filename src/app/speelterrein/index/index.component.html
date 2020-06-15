@@ -1,0 +1,79 @@
+<!-- <ul *ngFor="let speelterrein of Speelterreinen">
+   <li>{{speelterrein | json}}</li>
+</ul> -->
+
+<div class="container">
+
+    <h1>Speelterreinen</h1>
+
+    <table class="table table-bordered">
+
+      <tr>
+        <th>Foto</th>
+        <th>Speelterrein</th>
+
+        <th>Adres</th>
+
+        
+
+        <th width="220px">Action</th>
+
+      </tr>
+
+      <tr *ngFor="let speelterrein of Speelterreinen">
+        <td>
+          <img src="{{speelterrein.attributes.FOTO1}}" style="max-width: 200px; max-height: 200px;">
+        </td>
+        <td>{{ speelterrein.attributes.naam }}</td>
+
+        <td>
+          <p>{{ speelterrein.attributes.straat }} {{ speelterrein.attributes.huisnummer }}</p>
+          <p>{{speelterrein.attributes.postcode}} {{speelterrein.attributes.district}}</p>
+        </td>
+        <td>
+          <a href="#" [routerLink]="['/speelterrein/', speelterrein.attributes.OBJECTID, 'details']" class="btn btn-info">View</a>
+        </td>
+      </tr>
+    </table>
+ </div>
+
+
+<!-- <div class="col-md-12">
+ <h1>Speelterreinen</h1>
+</div>
+
+<div class="container" *ngFor="let speelterrein of Speelterreinen">
+
+  
+<br>
+  
+
+  <div class="card" >
+
+    <div class="card-header">
+
+      {{speelterrein.attributes.naam}}
+
+    </div>
+
+    <div class="card-body">
+     <div class="row">
+       <div class="col-md-3">
+        <img src="{{speelterrein.attributes.FOTO1}}" style="max-width: 200px; max-height: 200px;">
+     </div>
+     <div class="col-md-9">
+       <h5 class="card-title">Toestellen: {{speelterrein.attributes.toestellen}} - Opmerkingen: {{speelterrein.attributes.opmerking}}</h5>
+
+      
+      <p class="card-text">{{speelterrein.attributes.straat}} {{speelterrein.attributes.huisnummer}}</p>
+      <p class="card-text">{{speelterrein.attributes.postcode}} {{speelterrein.attributes.district}}</p>
+      <a href="#" [routerLink]="['/speelterrein/', speelterrein.attributes.OBJECTID, 'details' ]"  class="btn btn-primary">View</a>
+     </div>
+     </div>
+
+    </div>
+
+  </div>
+
+</div> -->
+

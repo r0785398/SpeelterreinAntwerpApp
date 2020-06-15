@@ -1,0 +1,55 @@
+<!-- {{speelterrein | json}} -->
+
+<div class="container">
+    <h1>Detail Speelterrein</h1>
+  
+<br>
+
+    <a href="#" routerLink="/speelterrein-index" class="btn btn-primary">Back</a>
+    <br>
+    <div>
+        <img src="{{speelterrein.attributes.FOTO1}}" style="max-width: 200px; max-height: 200px;">
+    </div>
+    <br>
+   <div class="row">
+       <div class="col-sm-3">
+            <strong>ID:</strong>
+       </div>
+       <div class="col-sm-6">
+            <p>{{ speelterrein.attributes.OBJECTID }}</p>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-sm-3">
+            <strong>Speelterrein (Naam):</strong>
+       </div>
+       <div class="col-sm-6">
+            <p>{{ speelterrein.attributes.naam }}</p>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-sm-3">
+            <strong>Adres:</strong>
+       </div>
+       <div class="col-sm-6">
+            <p>{{ speelterrein.attributes.straat }} {{ speelterrein.attributes.huisnummer }}</p>
+            <p>{{speelterrein.attributes.postcode}} {{speelterrein.attributes.district}}</p>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-sm-3">
+            <strong>Toestellen:</strong>
+       </div>
+       <div class="col-sm-6">
+            <p>{{speelterrein.attributes.toestellen}}</p>
+       </div>
+   </div>
+   <div class="row">
+       <div class="col-sm-3">
+            <strong>Opmering:</strong>
+       </div>
+       <div class="col-sm-6">
+            <p>{{speelterrein.attributes.opmerking}}</p>
+       </div>
+   </div>
+</div>
